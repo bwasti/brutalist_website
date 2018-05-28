@@ -1,2 +1,1 @@
-# brutalist_website
-brutalist website design
+trying out some brutalist website design
