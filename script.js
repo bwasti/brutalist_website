@@ -1,10 +1,14 @@
-window.addEventListener('load', function() {
-});
-
 let scrollPreventer = 0;
 let scrollPreventerTimeout = null;
 let scrollPreventerMax = 20;
 let windowMultiple = 1;
+
+window.addEventListener('load', function() {
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    scrollPreventerMax = 0;
+  }
+});
+
 window.addEventListener('scroll', function(e) {
   let maxScroll = window.innerHeight * windowMultiple;
   let overScrolled = window.scrollY > maxScroll;
